@@ -1,0 +1,14 @@
+.outer-page-container {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+}
+
+.inner-page-container {
+    display: flex;
+    margin-top: 96px; /* Top bar height = 64px, margin from topbar = 32px, for a total 96px */
+    margin-left: var(--page-margin-horizontal);
+    margin-right: var(--page-margin-horizontal);
+    width: 100vw;
+    height: var(100vh - 96px);
+}

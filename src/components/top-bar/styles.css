@@ -1,0 +1,18 @@
+.logo {
+    width: 151px;
+    height: 16px;
+    margin-right: 32px;
+}
+
+.toolbar {
+    margin-left: var(--page-margin-horizontal);
+    margin-right: var(--page-margin-horizontal);
+}
+
+.menuButton > * {
+    color: var(--color-text-neutral-tertiary)
+}
+
+.menuButton:hover {
+    color: var(--color-text-neutral-on-neutral)
+}
