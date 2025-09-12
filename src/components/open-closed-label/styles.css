@@ -1,0 +1,17 @@
+.label-container{
+    font-weight: 600;
+    padding: 2px;
+    text-align: center;
+    min-width: 60px;
+    border-radius: 16px;
+}
+
+.open-label {
+    color: var(--color-text-positive-tertiary);
+    background-color: var(--color-background-positive-tertiary);
+}
+
+.closed-label {
+    color: var(--color-text-danger-tertiary);
+    background-color: var(--color-background-danger-tertiary);
+}
