@@ -1,0 +1,64 @@
+{
+    "facilities": [
+        {
+            "id": "test-id-1",
+            "name": "Royal Golf Center",
+            "address": "456 Golf Lane, Aarhus, Denmark",
+            "description": "Random Description 1",
+            "imageLink": "seed_1",
+            "openingTime": "00:01:00",
+            "closingTime": "23:59:00",
+            "isDefault": true
+        },
+        {
+            "id": "test-id-2",
+            "name": "Green Valley Golf Club",
+            "address": "123 Fairway Drive, Copenhagen, Denmark",
+            "description": "Random Description 2",
+            "imageLink": "seed_2",
+            "openingTime": "23:59:00",
+            "closingTime": "00:01:00",
+            "isDefault": false
+        },
+        {
+            "id": "test-id-3",
+            "name": "Nordic Hills Golf Resort",
+            "address": "789 Birdie Street, Odense, Denmark",
+            "description": "Random Description 3",
+            "imageLink": "seed_3",
+            "openingTime": "12:00:00",
+            "closingTime": "00:00:00",
+            "isDefault": false
+        },
+        {
+            "id": "test-id-4",
+            "name": "Blue Lake Golf Club",
+            "address": "101 Par Avenue, Aalborg, Denmark",
+            "description": "Random Description 4",
+            "imageLink": "seed_4",
+            "openingTime": "13:01:00",
+            "closingTime": "14:59:00",
+            "isDefault": false
+        },
+        {
+            "id": "test-id-5",
+            "name": "Sunset Golf Park",
+            "address": "555 Eagle Way, Esbjerg, Denmark",
+            "description": "Random Description 5",
+            "imageLink": "seed_5",
+            "openingTime": "06:00:00",
+            "closingTime": "18:00:00",
+            "isDefault": false
+        },
+        {
+            "id": "test-id-6",
+            "name": "Copenhagen Golf Park - Super long name to test ellipses",
+            "address": "12 Golfvej, Copenhagen, Denmark  - Super long address to test ellipses",
+            "description": "Random Description 6",
+            "imageLink": "seed_6",
+            "openingTime": "08:00:00",
+            "closingTime": "16:00:00",
+            "isDefault": false
+        }
+    ]
+}
