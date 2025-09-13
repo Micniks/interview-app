@@ -3,7 +3,7 @@ import "./styles.css";
 
 const OpenClosedLabel = ({isOpen}) => {
 
-  var labelClass = "label-container "
+  var labelClass = "label-container small-text "
   labelClass += isOpen ? "open-label" : "closed-label"
 
   var labelText = isOpen ? "Open" : "Closed"

@@ -1,17 +1,21 @@
-.label-container{
-    font-weight: 600;
-    padding: 2px;
-    text-align: center;
-    min-width: 60px;
-    border-radius: 16px;
+.label-container {
+  font-weight: 600;
+  padding: 2px;
+  text-align: center;
+  min-width: 60px;
+  border-radius: 16px;
+
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
 }
 
 .open-label {
-    color: var(--color-text-positive-tertiary);
-    background-color: var(--color-background-positive-tertiary);
+  color: var(--color-text-positive-tertiary);
+  background-color: var(--color-background-positive-tertiary);
 }
 
 .closed-label {
-    color: var(--color-text-danger-tertiary);
-    background-color: var(--color-background-danger-tertiary);
+  color: var(--color-text-danger-tertiary);
+  background-color: var(--color-background-danger-tertiary);
 }
