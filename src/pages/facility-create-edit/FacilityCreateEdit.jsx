@@ -1,6 +1,6 @@
 import React from "react";
-import AppTopBar from "../components/top-bar/top-bar-component";
-import './styles.css'
+import AppTopBar from "../../components/top-bar/top-bar-component";
+import '../page-styles.css'
 
 const FacilityCreateEdit = () => {
   return (

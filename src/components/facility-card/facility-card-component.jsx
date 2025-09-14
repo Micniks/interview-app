@@ -11,14 +11,14 @@ const FacilityCard = (props) => {
     id,
     name,
     address,
-    description,
+    description, // Not currently used in Figma design other than on create/edit page.
     imageLink,
     openingTime,
     closingTime,
     isDefault,
   } = props;
 
-  const isFacilityOpen = (openingTime, closingTime) => {
+  const isFacilityOpen = useCallback((openingTime, closingTime) => {
     var currentDate = new Date();
 
     var startDate = new Date(currentDate.getTime());
@@ -32,38 +32,38 @@ const FacilityCard = (props) => {
     endDate.setSeconds(closingTime.split(":")[2]);
 
     return startDate < currentDate && endDate > currentDate;
-  };
+  }, [])
 
   //TODO: 13-09-2025 - Update with delete logic here
   const deleteClicked = useCallback(() => {
     console.log("DELETE FACILITY " + id);
   }, [id]);
 
-  //TODO: 13-09-2025 - Update with delete logic here
+  //TODO: 13-09-2025 - Update with edit logic here
   const editClicked = useCallback(() => {
     console.log("EDIT FACILITY " + id);
   }, [id]);
 
   return (
-    <div class="card-container">
-      <div class="image-container">
-        <img class="card-image" src={imageLink} alt="" />
+    <div className="card-container">
+      <div className="image-container">
+        <div className="card-image" style={{ backgroundImage: `url(${imageLink})`}} alt="Facility Image" />
         {isDefault && (
-          <img class="card-default-icon" src={DefaultFacilityIcon} alt="" />
+          <img className="card-default-icon" src={DefaultFacilityIcon} alt="Default facility" />
         )}
       </div>
 
-      <div class="card-content">
-        <div class="card-top-row">
-          <p class="card-title">{name}</p>
+      <div className="card-content">
+        <div className="card-top-row">
+          <p className="card-title">{name}</p>
           <OpenClosedLabel isOpen={isFacilityOpen(openingTime, closingTime)}/>
         </div>
-        <div class="card-bottom-row">
-          <div class="card-location">
-            <img clss="location-icon" src={LocationIcon} alt="Location" />
-            <p class="location-text small-text">{address}</p>
+        <div className="card-bottom-row">
+          <div className="card-location">
+            <img className="location-icon" src={LocationIcon} alt="Location" />
+            <p className="location-text small-text">{address}</p>
           </div>
-          <div class="card-actions">
+          <div className="card-actions">
             <IconButton iconLink={TrashIcon} iconAltText={"Delete Button"} onClick={deleteClicked}/>
             <button className="edit-button" onClick={editClicked}>Edit</button>
           </div>

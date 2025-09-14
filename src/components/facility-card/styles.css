@@ -20,8 +20,12 @@
   grid-row-start: 1;
 
   width: 100%;
-  height: auto;
+  height: 195px;
   border-radius: 8px;
+
+  background-position: center; 
+  background-repeat: no-repeat; 
+  background-size: cover; 
 }
 
 .card-default-icon {
@@ -52,7 +56,9 @@
   justify-content: space-between;
   align-items: center;
 
+  gap: 8px;
   height: 24px;
+  width: 100%;
 }
 
 .card-title {
@@ -67,13 +73,19 @@
   justify-content: space-between;
   align-items: center;
 
+  gap: 8px;
   height: 32px;
+  width: 100%;
 }
 
 .card-location {
   display: flex;
   flex-direction: row;
   align-items: center;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 
   gap: 2px;
 }
