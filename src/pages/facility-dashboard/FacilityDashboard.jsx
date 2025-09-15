@@ -1,33 +1,37 @@
-import React, { useCallback, useRef, useState } from "react";
+import React, { useCallback, useEffect, useRef, useState } from "react";
 import AppTopBar from "../../components/top-bar/top-bar-component";
 import FacilityCard from "../../components/facility-card/facility-card-component";
 import "../page-styles.css";
 import "./styles.css";
-import { useNavigate, Link } from "react-router";
-import Dialog from "@mui/material/Dialog";
-import DialogTitle from "@mui/material/DialogTitle";
-
+import { useNavigate } from "react-router";
 import config from "../../config.json";
-import getSeedData from "../../data/seedData";
+import setSeedData from "../../data/seedData";
 import TwoActionDialog from "../../components/dialogs/two-action-dialog";
+import { useLocalStorage } from "../../data/useLocalStorage";
 
 const FacilityDashboard = () => {
   const navigate = useNavigate();
+  const { getFacilities, setFacilities, removeFaciliy } = useLocalStorage();
   const [facilityData, setFacilityData] = useState([]);
   const [selectedFacility, setSelectedFacility] = useState(null);
   const deleteDialogRef = useRef(null);
 
+  useEffect(() => {
+    setFacilityData(getFacilities());
+  }, []);
+
   // ONLY FOR DEVELOPMENT - To easily showcase work
   const insertSeedData = useCallback(() => {
-    setFacilityData(getSeedData());
-  }, [getSeedData]);
+    setSeedData();
+    setFacilityData(getFacilities());
+  }, [setSeedData]);
 
   const goToCreateFacility = useCallback(() => {
     navigate(`/facility`);
   }, []);
 
   const onEditFacility = useCallback((facilityId) => {
-    navigate(`/facility?id=${facilityId}`);
+    navigate(`/facility/${facilityId}`);
   }, []);
 
   const onDeleteFacility = useCallback((facilityId, data) => {
@@ -38,10 +42,8 @@ const FacilityDashboard = () => {
 
   // DEV NOTE: This should be a call to a BE, and afterwards, we should re-fetch the data list.
   const removeSelectedFacility = () => {
-    var updatedList = facilityData.filter(
-      (facility) => facility.id != selectedFacility?.id
-    );
-    setFacilityData(updatedList);
+    removeFaciliy(selectedFacility?.id)
+    setFacilityData(getFacilities());
   };
 
   const getFacilityById = (id, data) => {
