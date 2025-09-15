@@ -125,8 +125,9 @@ button {
   padding: 12px 40px;
   font-size: 16px;
   font-weight: 700;
-  font-family: Nunito;
+  font-family: Nuntino;
   cursor: pointer;
+  border: 0;
 
   -webkit-user-select: none; /* Safari */
   -ms-user-select: none; /* IE 10 and IE 11 */

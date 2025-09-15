@@ -11,6 +11,5 @@
     margin-left: var(--page-margin-horizontal);
     margin-right: var(--page-margin-horizontal);
     width: 100vw;
-    height: var(100vh - 96px);
     flex-direction: column;
 }
