@@ -4,6 +4,27 @@
   flex-wrap: wrap;
   gap: 12px;
   padding-bottom: 48px;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: flex-start;
+}
+
+.action-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.seed-button {
+  background-color: var(--color-background-brand-default);
+  color: var(--color-text-positive-on-positive);
+  white-space: nowrap;
+}
+
+.create-button {
+  background-color: var(--color-primary-default);
+  color: var(--color-text-positive-on-positive);
+  white-space: nowrap;
 }

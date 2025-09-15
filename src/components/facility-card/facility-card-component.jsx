@@ -16,6 +16,8 @@ const FacilityCard = (props) => {
     openingTime,
     closingTime,
     isDefault,
+    onEdit,
+    onDelete
   } = props;
 
   const isFacilityOpen = useCallback((openingTime, closingTime) => {
@@ -36,13 +38,13 @@ const FacilityCard = (props) => {
 
   //TODO: 13-09-2025 - Update with delete logic here
   const deleteClicked = useCallback(() => {
-    console.log("DELETE FACILITY " + id);
-  }, [id]);
+    onDelete(id);
+  }, [id, onDelete]);
 
   //TODO: 13-09-2025 - Update with edit logic here
   const editClicked = useCallback(() => {
-    console.log("EDIT FACILITY " + id);
-  }, [id]);
+    onEdit(id);
+  }, [id, onEdit]);
 
   return (
     <div className="card-container">
