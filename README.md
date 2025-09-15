@@ -1,12 +1,11 @@
-# React + Vite
+# Interview Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+React app made for interview for Trackman.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+After download, be sure to run an install for dependencies: `npm install`
 
-## Expanding the ESLint configuration
+Can be started with command: `npm run dev`
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+Items are saved to local storage in browser, and while dashboard is empty, a button will be available for quick seeding of facilities.
