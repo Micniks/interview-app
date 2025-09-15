@@ -1,18 +1,12 @@
-import React from "react";
 import "./styles.css";
 
-const OpenClosedLabel = ({isOpen}) => {
+const OpenClosedLabel = ({ isOpen }) => {
+  var labelClass = "label-container small-text ";
+  labelClass += isOpen ? "open-label" : "closed-label";
 
-  var labelClass = "label-container small-text "
-  labelClass += isOpen ? "open-label" : "closed-label"
+  var labelText = isOpen ? "Open" : "Closed";
 
-  var labelText = isOpen ? "Open" : "Closed"
-
-  return (
-    <div className={labelClass}>
-        {labelText}
-    </div>
-  );
+  return <div className={labelClass}>{labelText}</div>;
 };
 
 export default OpenClosedLabel;

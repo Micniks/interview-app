@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import AppTopBar from "../../components/top-bar/top-bar-component";
 import FacilityCard from "../../components/facility-card/facility-card-component";
 import "../page-styles.css";
@@ -42,7 +42,7 @@ const FacilityDashboard = () => {
 
   // DEV NOTE: This should be a call to a BE, and afterwards, we should re-fetch the data list.
   const removeSelectedFacility = () => {
-    removeFaciliy(selectedFacility?.id)
+    removeFaciliy(selectedFacility?.id);
     setFacilityData(getFacilities());
   };
 

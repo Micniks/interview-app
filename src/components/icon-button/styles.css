@@ -1,14 +1,14 @@
-.icon-button{
-    padding: 8px;
-    width: 32px;
-    height: 32px;
-    border-radius: 8px;
-    border: 0;
+.icon-button {
+  padding: 8px;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  border: 0;
 
-    background-color: var(--color-background-default-secondary);
+  background-color: var(--color-background-default-secondary);
 }
 
 .inner-icon {
-    width: 16px;
-    height: 16px;
+  width: 16px;
+  height: 16px;
 }

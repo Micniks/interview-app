@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import AppTopBar from "../../components/top-bar/top-bar-component";
 import "../page-styles.css";
@@ -26,7 +26,6 @@ const FacilityCreateEdit = () => {
     // Add values to fields on edit
     if (id) {
       var facility = getFacility(id);
-      console.log(facility)
       if (facility) {
         setValue("name", facility.name);
         setValue("address", facility.address);
@@ -38,11 +37,9 @@ const FacilityCreateEdit = () => {
       }
     }
     var facilities = getFacilities();
-    console.log(facilities)
     if (
       facilities.length == 0 ||
-      (facilities.length == 1 &&
-        id == facilities[0].id)
+      (facilities.length == 1 && id == facilities[0].id)
     ) {
       setForceDefault(true);
       setValue("isDefault", true);
@@ -57,8 +54,7 @@ const FacilityCreateEdit = () => {
       // throw Error("name");
       // throw Error("other");
 
-      
-      if(id) data = {...data, id: id}
+      if (id) data = { ...data, id: id };
       setFacility(data);
       navigate(`/`);
     } catch (error) {
@@ -83,16 +79,19 @@ const FacilityCreateEdit = () => {
     [setError]
   );
 
-  const goBack = useCallback((e) => {
-    e.preventDefault()
-    navigate(`/`);
-  }, [navigate])
+  const goBack = useCallback(
+    (e) => {
+      e.preventDefault();
+      navigate(`/`);
+    },
+    [navigate]
+  );
 
   return (
     <div className="outer-page-container">
       <AppTopBar />
       <div className="inner-page-container">
-        <h2 className="title-text">Create a New Facility</h2>
+        <h2>Create a New Facility</h2>
         <form className="form-container" onSubmit={handleSubmit(onSubmit)}>
           <h3 className="form-header-text">Facility Information</h3>
           <div className="input-container">
@@ -182,11 +181,7 @@ const FacilityCreateEdit = () => {
           </div>
 
           <div className="button-row">
-            <button
-              className="cancel-button"
-              disabled={isSubmitting}
-              onClick={goBack}
-            >
+            <button disabled={isSubmitting} onClick={goBack}>
               Cancel
             </button>
             <button
@@ -194,7 +189,7 @@ const FacilityCreateEdit = () => {
               type="Submit"
               disabled={isSubmitting}
             >
-              {id ? ("Update Facility"): ("Create Facility")}
+              {id ? "Update Facility" : "Create Facility"}
             </button>
           </div>
         </form>

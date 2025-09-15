@@ -58,13 +58,13 @@
 @font-face {
   font-family: "Nuntino";
   src: local("Nunito-VariableFont_wght"),
-    url("./fonts/Nunito-VariableFont_wght.ttf") format("truetype");
+    url("./assets/fonts/Nunito-VariableFont_wght.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "Nuntino Italic";
   src: local("Nunito-Italic-VariableFont_wght"),
-    url("./fonts/Nunito-Italic-VariableFont_wght.ttf") format("truetype");
+    url("./assets/fonts/Nunito-Italic-VariableFont_wght.ttf") format("truetype");
 }
 
 a {

@@ -25,7 +25,6 @@ export const useLocalStorage = () => {
 
   const setFacility = (value) => {
     try {
-      console.log(value);
       var facilities = getFacilities();
       if (value.isDefault) {
         facilities = facilities.map((facility) => {
@@ -48,7 +47,7 @@ export const useLocalStorage = () => {
 
   const getFacility = (id) => {
     try {
-      let facility = getFacilities().find((facility) => (facility.id == id));
+      let facility = getFacilities().find((facility) => facility.id == id);
       return facility ? facility : undefined;
     } catch (error) {
       console.error(error);

@@ -10,32 +10,32 @@ import { useLocalStorage } from "./useLocalStorage";
 const { setFacilities } = useLocalStorage();
 
 const setSeedData = () => {
-    var data = SeedingData.facilities.map((facilityData) => {
-        var imageLink;
-        switch (facilityData.imageLink) {
-          case "seed_1":
-            imageLink = TestImage1;
-            break;
-          case "seed_2":
-            imageLink = TestImage2;
-            break;
-          case "seed_3":
-            imageLink = TestImage3;
-            break;
-          case "seed_4":
-            imageLink = TestImage4;
-            break;
-          case "seed_5":
-            imageLink = TestImage5;
-            break;
-          case "seed_6":
-          default:
-            imageLink = TestImage6;
-            break;
-        }
-        return {...facilityData, imageLink: imageLink}
-      });
-      setFacilities(data);
-}
+  var data = SeedingData.facilities.map((facilityData) => {
+    var imageLink;
+    switch (facilityData.imageLink) {
+      case "seed_1":
+        imageLink = TestImage1;
+        break;
+      case "seed_2":
+        imageLink = TestImage2;
+        break;
+      case "seed_3":
+        imageLink = TestImage3;
+        break;
+      case "seed_4":
+        imageLink = TestImage4;
+        break;
+      case "seed_5":
+        imageLink = TestImage5;
+        break;
+      case "seed_6":
+      default:
+        imageLink = TestImage6;
+        break;
+    }
+    return { ...facilityData, imageLink: imageLink };
+  });
+  setFacilities(data);
+};
 
 export default setSeedData;

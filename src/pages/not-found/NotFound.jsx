@@ -1,11 +1,10 @@
-import React from "react";
 import { useParams } from "react-router-dom";
 import AppTopBar from "../../components/top-bar/top-bar-component";
-import '../page-styles.css'
+import "../page-styles.css";
 
 const NotFound = () => {
   const params = useParams();
-  const path = params["*"]
+  const path = params["*"];
 
   return (
     <div className="outer-page-container">

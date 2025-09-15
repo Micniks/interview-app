@@ -1,4 +1,3 @@
-import * as React from "react";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
@@ -39,7 +38,10 @@ function AppTopBar() {
     <Box sx={{ display: "flex" }}>
       <AppBar
         component="nav"
-        sx={{ bgcolor: "var(--color-background-brand-default)", whiteSpace: "nowrap"}}
+        sx={{
+          bgcolor: "var(--color-background-brand-default)",
+          whiteSpace: "nowrap",
+        }}
       >
         <Toolbar back="true" className="toolbar">
           <Link to="https://www.trackman.com/">

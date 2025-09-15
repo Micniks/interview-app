@@ -1,4 +1,4 @@
-import React, { useCallback } from "react";
+import { useCallback } from "react";
 import "./styles.css";
 import LocationIcon from "../../assets/svg/location_icon.svg";
 import DefaultFacilityIcon from "../../assets/svg/favorite_facility.svg";
@@ -40,12 +40,10 @@ const FacilityCard = (props) => {
     return afterOpen && beforeClose;
   }, []);
 
-  //TODO: 13-09-2025 - Update with delete logic here
   const deleteClicked = useCallback(() => {
     onDelete(id);
   }, [id, onDelete]);
 
-  //TODO: 13-09-2025 - Update with edit logic here
   const editClicked = useCallback(() => {
     onEdit(id);
   }, [id, onEdit]);

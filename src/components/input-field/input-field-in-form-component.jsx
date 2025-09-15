@@ -1,6 +1,4 @@
-import React, { useEffect } from "react";
 import "./styles.css";
-import { Pattern } from "@mui/icons-material";
 
 const InputFieldInForm = ({
   isRequired,
@@ -11,7 +9,7 @@ const InputFieldInForm = ({
   inputType,
   formRegister,
   style,
-  disabled
+  disabled,
 }) => {
   var inputClass = "small-text input-field";
   if (inputType == "textarea") inputClass += " input-field-text-area";

@@ -1,4 +1,4 @@
-import React, { useCallback } from "react";
+import { useCallback } from "react";
 import IconButton from "../icon-button/icon-button-component";
 import closeIcon from "../../assets/svg/close_icon.svg";
 
