@@ -4,7 +4,8 @@ import AppTopBar from "../../components/top-bar/top-bar-component";
 import '../page-styles.css'
 
 const NotFound = () => {
-  const { path } = useParams();
+  const params = useParams();
+  const path = params["*"]
 
   return (
     <div className="outer-page-container">

@@ -14,11 +14,11 @@ export const router = createBrowserRouter([
     element: <FacilityDashboard />
   },
   {
-    path: "/facility/:facilityId", 
+    path: "/facility", 
     element: <FacilityCreateEdit />
   },
   {
-    path: ":path", 
+    path: "/*", 
     element: <NotFound />
   }
 ])
