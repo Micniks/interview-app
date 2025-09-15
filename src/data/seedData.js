@@ -5,8 +5,11 @@ import TestImage4 from "../assets/seed-images/seed_4.jpg";
 import TestImage5 from "../assets/seed-images/seed_5.jpg";
 import TestImage6 from "../assets/seed-images/seed_6.jpg";
 import SeedingData from "../assets/seeding-data/seeding-facilities.json";
+import { useLocalStorage } from "./useLocalStorage";
 
-const getSeedData = () => {
+const { setFacilities } = useLocalStorage();
+
+const setSeedData = () => {
     var data = SeedingData.facilities.map((facilityData) => {
         var imageLink;
         switch (facilityData.imageLink) {
@@ -32,7 +35,7 @@ const getSeedData = () => {
         }
         return {...facilityData, imageLink: imageLink}
       });
-      return data;
+      setFacilities(data);
 }
 
-export default getSeedData;
+export default setSeedData;

@@ -6,8 +6,8 @@
             "address": "456 Golf Lane, Aarhus, Denmark",
             "description": "Random Description 1",
             "imageLink": "seed_1",
-            "openingTime": "00:01:00",
-            "closingTime": "23:59:00",
+            "openingTime": "00:01",
+            "closingTime": "23:59",
             "isDefault": true
         },
         {
@@ -16,8 +16,8 @@
             "address": "123 Fairway Drive, Copenhagen, Denmark",
             "description": "Random Description 2",
             "imageLink": "seed_2",
-            "openingTime": "23:59:00",
-            "closingTime": "00:01:00",
+            "openingTime": "23:59",
+            "closingTime": "00:01",
             "isDefault": false
         },
         {
@@ -26,8 +26,8 @@
             "address": "789 Birdie Street, Odense, Denmark",
             "description": "Random Description 3",
             "imageLink": "seed_3",
-            "openingTime": "12:00:00",
-            "closingTime": "00:00:00",
+            "openingTime": "12:00",
+            "closingTime": "00:00",
             "isDefault": false
         },
         {
@@ -36,8 +36,8 @@
             "address": "101 Par Avenue, Aalborg, Denmark",
             "description": "Random Description 4",
             "imageLink": "seed_4",
-            "openingTime": "13:01:00",
-            "closingTime": "14:59:00",
+            "openingTime": "13:01",
+            "closingTime": "14:59",
             "isDefault": false
         },
         {
@@ -46,8 +46,8 @@
             "address": "555 Eagle Way, Esbjerg, Denmark",
             "description": "Random Description 5",
             "imageLink": "seed_5",
-            "openingTime": "06:00:00",
-            "closingTime": "18:00:00",
+            "openingTime": "06:00",
+            "closingTime": "18:00",
             "isDefault": false
         },
         {
@@ -56,8 +56,8 @@
             "address": "12 Golfvej, Copenhagen, Denmark  - Super long address to test ellipses",
             "description": "Random Description 6",
             "imageLink": "seed_6",
-            "openingTime": "08:00:00",
-            "closingTime": "16:00:00",
+            "openingTime": "08:00",
+            "closingTime": "16:00",
             "isDefault": false
         }
     ]

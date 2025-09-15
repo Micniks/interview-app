@@ -18,6 +18,10 @@ export const router = createBrowserRouter([
     element: <FacilityCreateEdit />
   },
   {
+    path: "/facility/:id", 
+    element: <FacilityCreateEdit />
+  },
+  {
     path: "/*", 
     element: <NotFound />
   }
